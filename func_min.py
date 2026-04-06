@@ -1,0 +1,36 @@
+import numpy as np
+
+def func_min(X_CDF,CDF_inv,V):
+    # Funcion a minimizar
+
+    #----------- Puntos iniciales ---------------
+    A = V[0]
+    r = V[2]
+    #--------------------------------------------
+    
+    #------ Terminos de la sumatoria ---------
+    L0 = V[1]
+    L1 = L0/(1 + 1/(A*r))
+    L2 = L0/(1 + 2/(A*r))
+    L3 = L0/(1 + 3/(A*r))
+    L4 = L0/(1 + 4/(A*r))
+    L5 = L0/(1 + 5/(A*r))
+    L6 = L0/(1 + 6/(A*r))
+    L7 = L0/(1 + 7/(A*r))
+    L8 = L0/(1 + 8/(A*r))
+    L9 = L0/(1 + 9/(A*r))
+    L10 = L0/(1 + 10/(A*r))
+    L11 = L0/(1 + 11/(A*r))
+    L12 = L0/(1 + 12/(A*r))
+    L13 = L0/(1 + 13/(A*r))
+    L14 = L0/(1 + 14/(A*r))
+    #------------------------------------------
+
+    x = X_CDF/10
+    C = np.exp(-A)
+
+    #------- Funcion de Costo ---------------------------
+    y = np.sum((CDF_inv - C*np.exp(-L0*(10**x)) - A*C*np.exp(-L1*(10**x)) - (A**2/2)*C*np.exp(-L2*(10**x)) - (A**3/6)*C*np.exp(-L3*(10**x)) - (A**4/24)*C*np.exp(-L4*(10**x)) - (A**5/120)*C*np.exp(-L5*(10**x)) - (A**6/720)*C*np.exp(-L6*(10**x)) - (A**7/5040)*C*np.exp(-L7*(10**x)) - (A**8/40320)*C*np.exp(-L8*(10**x)) - (A**9/362880)*C*np.exp(-L9*(10**x)) - (A**10/3628800)*C*np.exp(-L10*(10**x)) - (A**11/np.math.factorial(11))*C*np.exp(-L11*(10**x)) - (A**12/np.math.factorial(12))*C*np.exp(-L12*(10**x)) - (A**13/np.math.factorial(13))*C*np.exp(-L13*(10**x)) - (A**14/np.math.factorial(14))*C*np.exp(-L14*(10**x)))**2)
+    #----------------------------------------------------
+
+    return y
