@@ -4,20 +4,20 @@ from scipy.special import factorial
 import numpy.matlib as np_matlib
 
 from ClassA import RFI_MakeEnvelopeDataClassA
-from func_min_2 import func_min_2
-from func_min_3 import func_min_3
-from func_min_4 import func_min_4
-from func_min_5 import func_min_5
-from func_min_6 import func_min_6
-from func_min_7 import func_min_7
-from func_min_8 import func_min_8
-from func_min_9 import func_min_9
-from func_min_10 import func_min_10
-from func_min_11 import func_min_11
-from func_min_12 import func_min_12
-from func_min_13 import func_min_13
-from func_min_14 import func_min_14
-from func_min_15 import func_min_15
+from Tests.func_min_2 import func_min_2
+from Tests.func_min_3 import func_min_3
+from Tests.func_min_4 import func_min_4
+from Tests.func_min_5 import func_min_5
+from Tests.func_min_6 import func_min_6
+from Tests.func_min_7 import func_min_7
+from Tests.func_min_8 import func_min_8
+from Tests.func_min_9 import func_min_9
+from Tests.func_min_10 import func_min_10
+from Tests.func_min_11 import func_min_11
+from Tests.func_min_12 import func_min_12
+from Tests.func_min_13 import func_min_13
+from Tests.func_min_14 import func_min_14
+from Tests.func_min_15 import func_min_15
 
 def Est_Param_ClassA_CDF_2(env_data,Vi,num_iter,func_eval):
     """
