@@ -3,7 +3,7 @@ import math
 from scipy.special import factorial
 import numpy.random as random
 
-from momento import momento
+from core.momento import momento
 
 def RFI_MakeEnvelopeDataClassA(A,r,M,N,Sigmag2):
     """

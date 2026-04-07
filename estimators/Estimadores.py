@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 from math import *
 from scipy.special import factorial
 import numpy.matlib as np_matlib
-from RFI_EMParamK_AFixed import RFI_EMParamK_AFixed
-from RFI_EMCalculateObjFunc import RFI_EMCalculateObjFunc
+from estimators.RFI_EMParamK_AFixed import RFI_EMParamK_AFixed
+from estimators.RFI_EMCalculateObjFunc import RFI_EMCalculateObjFunc
 from scipy.io import loadmat
 
-from ClassA import RFI_MakeEnvelopeDataClassA
-from func_min import func_min
-from momento import momento
+from core.ClassA import RFI_MakeEnvelopeDataClassA
+from core.func_min import func_min
+from core.momento import momento
 
 def Est_Momentos_Kanemoto(env_data):
     """
